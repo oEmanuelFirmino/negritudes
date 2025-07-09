@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Negritudes F.C. - Raça, Talento e Paixão</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ScrollReveal.js for animations -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Favicon (using the provided logo) -->
+    <link rel="icon" href="./public/assets/logo.svg" type="image/png" />
+
+    <style>
+      /* Custom styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #111111; /* Um preto um pouco mais suave */
+        color: #f1f1f1;
+      }
+      /* Custom Pink Color from the jersey */
+      .text-custom-pink {
+        color: #ec4899;
+      }
+      .bg-custom-pink {
+        background-color: #ec4899;
+      }
+      .border-custom-pink {
+        border-color: #ec4899;
+      }
+      /* Parallax background */
+      .parallax {
+        background-image: url("./public/assets/liga_justica.svg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .section-title {
+        font-weight: 900;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      @media (min-width: 768px) {
+        .section-title {
+          font-size: 3.5rem;
+        }
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/50"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="#" class="w-16 h-16">
+          <img
+            src="./public/assets/logo.svg"
+            alt="Logo Negritudes F.C."
+            class="w-full h-full object-contain"
+          />
+        </a>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="#sobre"
+            class="text-white hover:text-custom-pink transition duration-300 font-semibold"
+            >Sobre</a
+          >
+          <a
+            href="#identidade"
+            class="text-white hover:text-custom-pink transition duration-300 font-semibold"
+            >Identidade</a
+          >
+          <a
+            href="#galeria"
+            class="text-white hover:text-custom-pink transition duration-300 font-semibold"
+            >Galeria</a
+          >
+          <a
+            href="#contato"
+            class="bg-custom-pink text-white px-6 py-2 rounded-full font-bold hover:bg-opacity-80 transition duration-300"
+            >Contato</a
+          >
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-10">
+        <a
+          href="#sobre"
+          class="block text-center text-white py-3 hover:bg-custom-pink transition duration-300"
+          >Sobre</a
+        >
+        <a
+          href="#identidade"
+          class="block text-center text-white py-3 hover:bg-custom-pink transition duration-300"
+          >Identidade</a
+        >
+        <a
+          href="#galeria"
+          class="block text-center text-white py-3 hover:bg-custom-pink transition duration-300"
+          >Galeria</a
+        >
+        <a
+          href="#contato"
+          class="block text-center text-white py-3 hover:bg-custom-pink transition duration-300"
+          >Contato</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="h-screen w-full parallax flex items-center justify-center relative"
+    >
+      <!-- Overlay with darken and blur effect -->
+      <div class="absolute inset-0 bg-black/5 backdrop-blur-xs"></div>
+      <!-- Content -->
+      <div class="relative text-center z-10 p-4">
+        <h1
+          class="text-5xl md:text-8xl font-black text-white uppercase tracking-wider reveal-up"
+        >
+          Negritudes <span class="text-custom-pink">F.C.</span>
+        </h1>
+        <p
+          class="text-lg md:text-2xl text-gray-200 mt-4 font-light reveal-down"
+        >
+          Fundado em 2023. De Carmo de Minas para o mundo.
+        </p>
+      </div>
+    </section>
+
+    <main>
+      <!-- Sobre Nós Section -->
+      <section id="sobre" class="py-20 md:py-32">
+        <div
+          class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div class="reveal-left">
+            <img
+              src="./public/assets/foto_jogo.jpg"
+              alt="Time do Negritudes F.C. em campo"
+              class="rounded-lg shadow-2xl w-full h-auto object-cover"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/FFFFFF?text=Time+Negritudes';"
+            />
+          </div>
+          <div class="reveal-right">
+            <h2 class="section-title mb-6">
+              Sobre <span class="text-custom-pink">Nós</span>
+            </h2>
+            <p class="text-lg text-gray-300 mb-4">
+              O Negritudes F. C. é um time de futebol amador, fundado em 2023,
+              em Carmo de Minas - MG.
+            </p>
+            <p class="text-lg text-gray-300">
+              Mais do que um time, somos um movimento. Representamos a
+              <span class="text-custom-pink font-semibold">raça</span>, o
+              <span class="text-custom-pink font-semibold">talento</span> e a
+              <span class="text-custom-pink font-semibold">paixão</span> pelo
+              futebol de várzea, levando a voz da nossa comunidade para cada
+              campo que pisamos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Identidade Section -->
+      <section id="identidade" class="py-20 md:py-32 bg-black">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="section-title mb-12 reveal-up">
+            Nossa <span class="text-custom-pink">Identidade</span>
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1: Cultura -->
+            <div class="glass-effect p-8 rounded-xl reveal-1">
+              <h3 class="text-2xl font-bold text-custom-pink mb-4">
+                CULTURA E VALOR
+              </h3>
+              <p class="text-gray-300">
+                Criado para valorizar a cultura, a identidade e o talento local.
+                Levamos para campo a garra e a paixão de um coletivo que
+                representa muito mais que futebol.
+              </p>
+            </div>
+            <!-- Card 2: Coletividade -->
+            <div class="glass-effect p-8 rounded-xl reveal-2">
+              <h3 class="text-2xl font-bold text-custom-pink mb-4">
+                FORÇA E RESPEITO
+              </h3>
+              <p class="text-gray-300">
+                Com uniforme nas cores preto e rosa, nos destacamos pelo visual
+                e pelo espírito de coletividade, força e respeito à nossa
+                quebrada.
+              </p>
+            </div>
+            <!-- Card 3: Resistência -->
+            <div class="glass-effect p-8 rounded-xl reveal-3">
+              <h3 class="text-2xl font-bold text-custom-pink mb-4">
+                GARRA E RESISTÊNCIA
+              </h3>
+              <p class="text-gray-300">
+                Cada jogo é uma afirmação da nossa existência e talento. Jogamos
+                com a resistência e a paixão de quem luta todos os dias dentro e
+                fora de campo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galeria Section -->
+      <section id="galeria" class="py-20 md:py-32">
+        <div class="container mx-auto px-6">
+          <h2 class="section-title text-center mb-12 reveal-up">
+            Nossos <span class="text-custom-pink">Mantos</span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Image 1 Container -->
+            <div
+              class="reveal-left h-[35rem] md:h-[40rem] bg-black/20 rounded-lg overflow-hidden shadow-lg"
+            >
+              <img
+                src="./public/assets/uniforme_jogo.jpg"
+                alt="Uniforme 1 do Negritudes F.C."
+                class="w-full h-full object-cover object-center"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x800/111111/FFFFFF?text=Uniforme+1';"
+              />
+            </div>
+            <!-- Image 2 Container -->
+            <div
+              class="reveal-right h-[35rem] md:h-[40rem] bg-black/20 rounded-lg overflow-hidden shadow-lg"
+            >
+              <img
+                src="./public/assets/uniforme_torcida.jpg"
+                alt="Uniforme 2 do Negritudes F.C."
+                class="w-full h-full object-cover object-center"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x800/111111/FFFFFF?text=Uniforme+2';"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Patrocínio Section -->
+      <section id="patrocinio" class="py-20 md:py-32 bg-black">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="section-title mb-6 reveal-up">
+            Seja Nosso <span class="text-custom-pink">Parceiro</span>
+          </h2>
+          <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-12 reveal-down">
+            Patrocinar o Negritudes F. C. é acreditar na força da quebrada, no
+            poder do esporte e na transformação através da oportunidade. Junte
+            sua marca a um projeto com visibilidade e propósito.
+          </p>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+            <div class="reveal-1">
+              <h3 class="font-bold text-custom-pink text-xl">✓ Visibilidade</h3>
+              <p class="text-gray-400">
+                Exposição da sua marca em uniformes, redes sociais e eventos.
+              </p>
+            </div>
+            <div class="reveal-2">
+              <h3 class="font-bold text-custom-pink text-xl">✓ Conexão Real</h3>
+              <p class="text-gray-400">
+                Alinhamento com um projeto que valoriza a periferia e a
+                identidade negra.
+              </p>
+            </div>
+            <div class="reveal-3">
+              <h3 class="font-bold text-custom-pink text-xl">✓ Engajamento</h3>
+              <p class="text-gray-400">
+                Produção de conteúdo e engajamento direto com o público
+                regional.
+              </p>
+            </div>
+            <div class="reveal-4">
+              <h3 class="font-bold text-custom-pink text-xl">✓ Comunidade</h3>
+              <p class="text-gray-400">
+                Sua marca associada à paixão de uma torcida vibrante e fiel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato Section -->
+      <section id="contato" class="py-20 md:py-32 parallax">
+        <div class="absolute inset-0 bg-black opacity-80"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+          <h2 class="section-title mb-6 reveal-up">
+            Vamos <span class="text-custom-pink">Juntos?</span>
+          </h2>
+          <p class="text-xl text-gray-200 mb-8 reveal-down">
+            Entre em contato, siga nosso time e venha fazer parte da nossa
+            história.
+          </p>
+          <div
+            class="flex flex-col md:flex-row justify-center items-center gap-8"
+          >
+            <a
+              href="https://wa.me/553598509939"
+              target="_blank"
+              class="bg-custom-pink text-white text-lg font-bold px-10 py-4 rounded-full hover:bg-opacity-80 transition duration-300 reveal-1"
+            >
+              Fale Conosco (WhatsApp)
+            </a>
+            <a
+              href="https://www.instagram.com/negritudesfc23/"
+              target="_blank"
+              class="border-2 border-custom-pink text-white text-lg font-bold px-10 py-4 rounded-full hover:bg-custom-pink transition duration-300 reveal-2"
+            >
+              Siga no Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+      <div class="container mx-auto px-6 text-center text-gray-400">
+        <p>
+          &copy; <span id="year"></span> Negritudes F.C. Todos os direitos
+          reservados.
+        </p>
+        <p class="text-sm">Desenvolvido com a força da comunidade.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Set current year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when a link is clicked
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Sticky Header on Scroll
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("bg-black", "bg-opacity-80", "shadow-lg");
+        } else {
+          header.classList.remove("bg-black", "bg-opacity-80", "shadow-lg");
+        }
+      });
+
+      // ScrollReveal Animations
+      const sr = ScrollReveal({
+        distance: "50px",
+        duration: 1500,
+        easing: "cubic-bezier(0.5, 0, 0, 1)",
+        reset: false, // Animations will only happen once
+      });
+
+      sr.reveal(".reveal-up", { origin: "top" });
+      sr.reveal(".reveal-down", { origin: "bottom", delay: 200 });
+      sr.reveal(".reveal-left", { origin: "left" });
+      sr.reveal(".reveal-right", { origin: "right" });
+
+      // Staggered animations for cards/items
+      sr.reveal(".reveal-1", { delay: 200 });
+      sr.reveal(".reveal-2", { delay: 400 });
+      sr.reveal(".reveal-3", { delay: 600 });
+      sr.reveal(".reveal-4", { delay: 800 });
+    </script>
+  </body>
+</html>
