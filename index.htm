@@ -13,7 +13,49 @@
     />
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="icon" href="./public/assets/logo.svg" type="image/png" />
-    <link rel="stylesheet" href="./src/style.css" />
+    <!-- <link rel="stylesheet" href="./src/style.css" /> -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #111111;
+        color: #f1f1f1;
+      }
+
+      .text-custom-pink {
+        color: #ec4899;
+      }
+      .bg-custom-pink {
+        background-color: #ec4899;
+      }
+      .border-custom-pink {
+        border-color: #ec4899;
+      }
+
+      .parallax {
+        background-image: url("./public/assets/liga_justica.svg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .section-title {
+        font-weight: 900;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      @media (min-width: 768px) {
+        .section-title {
+          font-size: 3.5rem;
+        }
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
   </head>
   <body class="overflow-x-hidden">
     <header
