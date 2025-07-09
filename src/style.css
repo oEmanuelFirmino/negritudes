@@ -15,7 +15,7 @@
       }
 
       .parallax {
-        background-image: url("./public/assets/liga_justica.svg");
+        background-image: url("../../public/assets/liga_justica.svg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
